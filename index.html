@@ -9,14 +9,14 @@
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
     :root {
-      --bg: #0b0e13;
-      --surface: #111520;
-      --border: #1e2535;
-      --accent: #00e5ff;
+      --bg: #f8f9fc;
+      --surface: #ffffff;
+      --border: #e2e8f0;
+      --accent: #2563eb;
       --accent2: #7c3aed;
-      --text: #e2e8f0;
+      --text: #0f172a;
       --muted: #64748b;
-      --card: #141926;
+      --card: #ffffff;
     }
 
     html { scroll-behavior: smooth; }
@@ -52,7 +52,7 @@
       position: fixed; border-radius: 50%; filter: blur(120px);
       pointer-events: none; z-index: 0;
     }
-    .orb-1 { width: 500px; height: 500px; background: rgba(0,229,255,.07); top: -100px; left: -100px; }
+    .orb-1 { width: 500px; height: 500px; background: rgba(37,99,235,.08); top: -100px; left: -100px; }
     .orb-2 { width: 400px; height: 400px; background: rgba(124,58,237,.07); bottom: 100px; right: -80px; }
 
     /* ── NAV ── */
@@ -61,7 +61,7 @@
       display: flex; align-items: center; justify-content: space-between;
       padding: 1.1rem 5vw;
       backdrop-filter: blur(16px);
-      background: rgba(11,14,19,.75);
+      background: rgba(248,249,252,.85);
       border-bottom: 1px solid var(--border);
     }
     .nav-logo {
@@ -118,7 +118,7 @@
       text-decoration: none; transition: all .22s; cursor: pointer;
     }
     .btn-primary {
-      background: var(--accent); color: #000; font-weight: 600;
+      background: var(--accent); color: #fff; font-weight: 600;
       border: 1px solid var(--accent);
     }
     .btn-primary:hover { background: transparent; color: var(--accent); }
@@ -129,7 +129,9 @@
     .btn-ghost:hover { border-color: var(--accent); color: var(--accent); }
 
     /* SCROLL INDICATOR */
-    .scroll-hint {
+    .skill-card, .proj-card, .exp-card, .edu-card, .contact-item {
+      box-shadow: 0 1px 4px rgba(0,0,0,.07);
+    }
       position: absolute; bottom: 2rem; left: 50%; transform: translateX(-50%);
       display: flex; flex-direction: column; align-items: center; gap: .5rem;
       color: var(--muted); font-size: .65rem; letter-spacing: .15em;
@@ -170,7 +172,7 @@
     .skill-tags { display: flex; flex-wrap: wrap; gap: .5rem; }
     .tag {
       font-size: .72rem; padding: .28rem .65rem;
-      background: rgba(0,229,255,.07); border: 1px solid rgba(0,229,255,.18);
+      background: rgba(37,99,235,.07); border: 1px solid rgba(37,99,235,.2);
       border-radius: 2px; color: var(--text); letter-spacing: .04em;
     }
 
@@ -196,7 +198,7 @@
     .exp-role { font-size: .8rem; color: var(--muted); margin-bottom: 1.2rem; }
     .exp-bullets { list-style: none; display: flex; flex-direction: column; gap: .55rem; }
     .exp-bullets li {
-      font-size: .82rem; color: #94a3b8; line-height: 1.6; padding-left: 1.3rem; position: relative;
+      font-size: .82rem; color: #475569; line-height: 1.6; padding-left: 1.3rem; position: relative;
     }
     .exp-bullets li::before { content: '›'; position: absolute; left: 0; color: var(--accent); }
 
@@ -216,7 +218,7 @@
     }
     .proj-period { font-size: .68rem; color: var(--muted); white-space: nowrap; }
     .proj-desc {
-      font-size: .8rem; color: #94a3b8; line-height: 1.75; flex: 1;
+      font-size: .8rem; color: #475569; line-height: 1.75; flex: 1;
     }
     .proj-tech { display: flex; flex-wrap: wrap; gap: .4rem; }
     .tech-pill {
